@@ -1,5 +1,5 @@
 # Chess
-This is a chess game developed in java with swing.
+This is a chess game developed in java with swing. Download jar file and play!
 
 
 ![name1](https://user-images.githubusercontent.com/31993071/30618703-45d08476-9da4-11e7-91a2-650ec21bf56c.jpeg)
