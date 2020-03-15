@@ -3,6 +3,15 @@ package chess;
 import java.awt.*;
 import javax.swing.*;
 
+/**
+ * Constitutes the main frame of the application and creates the chessboard
+ * which is a grid layout 8x8. The method sets the color of each square and the
+ * pawns are being placed on the board.
+ * 
+ * @author Antonis Papadakis
+ * @see chess.MyJLabel#setLabel(JPanel[][], JPanel, String)
+ *
+ */
 public class Board extends JFrame {
 
 	private int i, j;

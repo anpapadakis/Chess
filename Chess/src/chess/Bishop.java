@@ -3,6 +3,14 @@ package chess;
 import java.awt.Color;
 import javax.swing.*;
 
+/**
+ * This is the class for the Bishop pawn. Is used to calculate the possible moves
+ * of the pawn.
+ * 
+ * @author Antonis Papadakis
+ * @see <a href="https://en.wikipedia.org/wiki/Bishop_(chess)">Wikipedia</a>
+ *
+ */
 public class Bishop {
 
 	private JPanel pos;
@@ -12,6 +20,14 @@ public class Bishop {
 		pos = new JPanel();
 	}
 
+	/**
+	 * Calculates the possible moves of the Bishop
+	 * 
+	 * @param name the char of the Bishop pawn
+	 * @param x    the x coordinate
+	 * @param y    the y coordinate
+	 * @param pa   the panel of the board
+	 */
 	public void moveBishop(String name, int x, int y, JPanel pa[][]) {
 
 		for (i = 1; x + i < 8 && y + i < 8; i++) {

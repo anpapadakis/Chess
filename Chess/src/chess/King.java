@@ -3,6 +3,14 @@ package chess;
 import java.awt.Color;
 import javax.swing.*;
 
+/**
+ * This is the class for the King pawn. Is used to calculate the possible moves
+ * of the pawn.
+ * 
+ * @author Antonis Papadakis
+ * @see <a href="https://en.wikipedia.org/wiki/King_(chess)">Wikipedia</a>
+ *
+ */
 public class King {
 
 	private JPanel pos;
@@ -11,6 +19,14 @@ public class King {
 		pos = new JPanel();
 	}
 
+	/**
+	 * Calculates the possible moves of the King
+	 * 
+	 * @param name the char of the King pawn
+	 * @param x    the x coordinate
+	 * @param y    the y coordinate
+	 * @param pa   the panel of the board
+	 */
 	public void moveKing(String name, int x, int y, JPanel pa[][]) {
 
 		if (x + 1 < 8 && y + 1 < 8) {

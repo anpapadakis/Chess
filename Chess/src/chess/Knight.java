@@ -3,6 +3,14 @@ package chess;
 import java.awt.Color;
 import javax.swing.*;
 
+/**
+ * This is the class for the Knight pawn. Is used to calculate the possible
+ * moves of the pawn.
+ * 
+ * @author Antonis Papadakis
+ * @see <a href="https://en.wikipedia.org/wiki/Knight_(chess)">Wikipedia</a>
+ *
+ */
 public class Knight {
 
 	private JPanel pos;
@@ -11,6 +19,14 @@ public class Knight {
 		pos = new JPanel();
 	}
 
+	/**
+	 * Calculates the possible moves of the Knight
+	 * 
+	 * @param name the char of the Knight pawn
+	 * @param x    the x coordinate
+	 * @param y    the y coordinate
+	 * @param pa   the panel of the board
+	 */
 	public void moveKnight(String name, int x, int y, JPanel pa[][]) {
 
 		if (y - 1 >= 0 && x + 2 < 8) {

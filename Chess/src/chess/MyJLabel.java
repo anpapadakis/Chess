@@ -4,6 +4,15 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+/**
+ * This method is used for the pieces placement and for their movement. When
+ * {@link #setLabel(JPanel[][], JPanel, String)} is called, a new pawn is
+ * created. Each pawn has a mouse listener to handle the possible moves and
+ * captures.
+ * 
+ * @author Antonis Papadakis
+ *
+ */
 public class MyJLabel {
 
 	private JLabel pawns;
@@ -18,6 +27,7 @@ public class MyJLabel {
 	private Pawn Pawn = new Pawn();
 	private King King = new King();
 
+	// The paws states using char type
 	private static final char BLACK_PAWN = '\u265F';
 	private static final char BLACK_ROOK = '\u265C';
 	private static final char BLACK_KNIGHT = '\u265E';
@@ -35,6 +45,13 @@ public class MyJLabel {
 
 	}
 
+	/**
+	 * Creates a new pawn
+	 * 
+	 * @param pa     is the main panel 8x8
+	 * @param button is the square on the board
+	 * @param name   is the char of the pawn
+	 */
 	public void setLabel(final JPanel pa[][], final JPanel button, String name) {
 		pawns = new JLabel();
 

@@ -3,6 +3,14 @@ package chess;
 import java.awt.Color;
 import javax.swing.*;
 
+/**
+ * This is the class for the Queen pawn. Is used to calculate the possible moves
+ * of the pawn.
+ * 
+ * @author Antonis Papadakis
+ * @see <a href="https://en.wikipedia.org/wiki/Queen_(chess)">Wikipedia</a>
+ *
+ */
 public class Queen {
 
 	private JPanel pos;
@@ -12,11 +20,19 @@ public class Queen {
 		pos = new JPanel();
 	}
 
+	/**
+	 * Calculates the possible moves of the Queen
+	 * 
+	 * @param name the char of the Queen pawn
+	 * @param x    the x coordinate
+	 * @param y    the y coordinate
+	 * @param pa   the panel of the board
+	 */
 	public void moveQueen(String name, int x, int y, JPanel pa[][]) {
 
 		for (i = 1; x + i < 8; i++) {
 			pos = pa[y][x + i];
-			
+
 			if (name.equals("WQ")) {
 				if (((JLabel) pos.getComponent(0)).getBackground().equals(Color.yellow)) {
 					pos.setBackground(Color.green);

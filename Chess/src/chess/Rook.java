@@ -3,6 +3,14 @@ package chess;
 import java.awt.Color;
 import javax.swing.*;
 
+/**
+ * This is the class for the Rook pawn. Is used to calculate the possible moves
+ * of the pawn.
+ * 
+ * @author Antonis Papadakis
+ * @see <a href="https://en.wikipedia.org/wiki/Rook_(chess)">Wikipedia</a>
+ *
+ */
 public class Rook {
 
 	private JPanel pos;
@@ -12,6 +20,14 @@ public class Rook {
 		pos = new JPanel();
 	}
 
+	/**
+	 * Calculates the possible moves of the Rook
+	 * 
+	 * @param name the char of the Rook pawn
+	 * @param x    the x coordinate
+	 * @param y    the y coordinate
+	 * @param pa   the panel of the board
+	 */
 	public void moveRook(String name, int x, int y, JPanel pa[][]) {
 
 		for (i = 1; x + i < 8; i++) {

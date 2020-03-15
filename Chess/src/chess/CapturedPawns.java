@@ -3,6 +3,13 @@ package chess;
 import java.awt.*;
 import javax.swing.*;
 
+/**
+ * This class is used to store the captured pawns. Also finds the winner of the
+ * game.
+ * 
+ * @author Antonis Papadakis
+ *
+ */
 public class CapturedPawns extends JFrame {
 
 	private JPanel panel;
@@ -48,6 +55,16 @@ public class CapturedPawns extends JFrame {
 		add(panel);
 	}
 
+	/**
+	 * Adds the captured pawn in the Captured pawns panel. The panel consists of one
+	 * textarea for white pawns and one textarea for black pawns. According to
+	 * pawn's background color, it is added in the appropriate textarea.
+	 * 
+	 * Also calculates the number of captured pawns for each color and shows the
+	 * winner of the game.
+	 * 
+	 * @param pawn the captured pawn
+	 */
 	public static void setCapturedPawn(JLabel pawn) {
 
 		if (pawn.getBackground().equals(Color.black)) {
