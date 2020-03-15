@@ -23,7 +23,7 @@ public class Board extends JFrame{
                 buttonPanel.setName("PANEL" + "_" + i + "." + j);
                 pa[i][j] = buttonPanel;
 
-                // ορισμός χρωμμάτων σκακιέρας
+                // chessboard colors setup
                 
                 if ((i + j) % 2 == 0) {
                     buttonPanel.setBackground(Color.white);
@@ -32,7 +32,7 @@ public class Board extends JFrame{
                 }
                 
 
-                // τοποθέτηση κομματιών 
+                // pieces placement
                 
                 if (i == 0) {
 

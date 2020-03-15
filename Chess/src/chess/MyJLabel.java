@@ -91,10 +91,10 @@ public class MyJLabel {
                 int y = Integer.valueOf(numbers[0]);
                 int x = Integer.valueOf(numbers[1]);
 
-                //πρώτο κλικ
+                // first click
                 if (k == 0) {
                     
-                    //επαναφορά χρωμμάτων της σκακιέρας
+                    // chessboard colors reset
                     
                     for (i = 0; i < 8; i++) {
                         for (j = 0; j < 8; j++) {
@@ -148,25 +148,26 @@ public class MyJLabel {
 
                 }
 
-                //δεύτερο κλικ                
+                // second click               
                 if (k == 1) {
 
                     secontLabel = (JLabel) e.getSource();
 
-                    //έλεγχος αν πατήθηκε το ίδιο πιόνι 2 φορές
+                    // check if the same pawn was clicked twice
                     if (secontLabel != firstLabel) {
                         if (pa[y][x].getBackground().equals(Color.green) ) {
 
                             CapturedPawns.setCapturedPawn(secontLabel);
                             
-                            secontLabel.setText(fisrtLabelText);                                          //αντικατάσταση του label + name + background   
+                            // replacement of label + name + background
+                            secontLabel.setText(fisrtLabelText);                                             
                             secontLabel.setName(firstLabel.getName());
                             secontLabel.setBackground(firstLabel.getBackground());
                             firstLabel.setText("");
                             firstLabel.setBackground(Color.yellow);
                             firstLabel.setName("");
 
-                            //εναλλαγή παίκτη
+                            // player switch
                                 if (state == 0) 
                                     state = 1;
                                 else 
@@ -177,7 +178,7 @@ public class MyJLabel {
 
                     System.out.println("click " + 2 + "  pawn position " + x + "," + y + " " + fisrtLabelText + " color " + secontLabel.getBackground() + " state " + state);
 
-                    //επαναφορά χρωμμάτων της σκακιέρας
+                    // chessboard colors reset
                     for (i = 0; i < 8; i++) {
                         for (j = 0; j < 8; j++) {
                             if (pa[i][j].getBackground() == Color.green) {
@@ -194,7 +195,8 @@ public class MyJLabel {
                     return;
                 }
 
-                if (fisrtLabelText != "") {                          //εάν το στο πρώτο κλικ δεν πατήθηκε κενό θα πάμε στο δεύτερο κλικ       
+                // if first click != "" will go to second click
+                if (fisrtLabelText != "") {                                 
                     k = 1;
                 }
 
